@@ -15,7 +15,10 @@ if (process.env.NODE_ENV === "production") {
 // Initialize Express
 const app = express();
 app.use(express.json());
-app.use(cors());
+//whitelist because it is not a secured url http/https and avoid cors-policy validation
+app.use(cors({origin : 'http://localhost:3000'}));
+// app.use(cors());
+
 
 // Initialize routes
 app.use("/jobs", baseJobsRoute);
