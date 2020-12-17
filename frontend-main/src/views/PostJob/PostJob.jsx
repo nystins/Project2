@@ -31,7 +31,7 @@ const PostJob = () => {
         myHeaders.append("Content-Type", "application/json");
 
         const raw = JSON.stringify(state);
-        //Post method i used "Postman" it helped me create this - John 
+        //Post method i used "Postman" it helped me create this
         const requestOptions = {
             method: 'POST',
             headers: myHeaders,
@@ -50,8 +50,6 @@ const PostJob = () => {
 
 
     return (
-        //regular html stuff to display div > form > input> submitform
-        //I used react's state in order to get the value as the user inputs
         <div className="Postjob">
             <h1>Post a Job</h1>
             <form className="postForm">
